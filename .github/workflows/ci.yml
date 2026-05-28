@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Shell tests
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run syntax checks
+        run: |
+          zsh -n scripts/export_photos_originals.zsh
+          zsh -n tests/export_photos_originals_test.zsh
+
+      - name: Run tests
+        run: zsh tests/export_photos_originals_test.zsh
