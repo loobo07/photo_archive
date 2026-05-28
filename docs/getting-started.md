@@ -3,6 +3,9 @@
 This guide walks through a safe first export from Apple Photos to an external
 drive.
 
+If you are setting up the project for the first time, start with
+[Install](install.md).
+
 ## 1. Prepare the External Drive
 
 Connect the drive and confirm it appears in Finder. The script only targets

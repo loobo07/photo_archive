@@ -331,7 +331,7 @@ If you are setting up the project for the first time, start with
 Run:
 
 ```bash
-rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs
+rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs --glob '!docs/superpowers/plans/**'
 ```
 
 Expected: no matches and exit code `1`.
@@ -409,8 +409,8 @@ In `README.md`, add `- [Platform Roadmap](docs/platform-roadmap.md)` under `## M
 Run:
 
 ```bash
-rg -n "Windows|Linux|macOS" README.md docs
-rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs
+rg -n "Windows|Linux|macOS" README.md docs --glob '!docs/superpowers/plans/**'
+rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs --glob '!docs/superpowers/plans/**'
 ```
 
 Expected: first command prints platform references; second command has no matches and exits `1`.
@@ -568,7 +568,7 @@ Run:
 
 ```bash
 just check
-rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs scripts tests
+rg -n "T[[:alpha:]]D|TO[[:alpha:]]O|FIX[[:alpha:]]E|implement[[:space:]]later|fill[[:space:]]in" README.md docs scripts tests --glob '!docs/superpowers/plans/**'
 ```
 
 Expected: `just check` passes. `rg` has no matches and exits `1`.

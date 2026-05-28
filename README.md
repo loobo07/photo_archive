@@ -29,7 +29,8 @@ For example:
 │   └── export_photos_originals_test.zsh
 └── docs/
     ├── architecture.md
-    └── getting-started.md
+    ├── getting-started.md
+    └── install.md
 ```
 
 - `scripts/export_photos_originals.zsh` is the exporter entrypoint.
@@ -37,6 +38,7 @@ For example:
   command options, and the no-target-volume error path.
 - `docs/getting-started.md` explains how to prepare a drive and run the export.
 - `docs/architecture.md` explains the script design and safety checks.
+- `docs/install.md` explains setup from a fresh clone.
 
 ## Requirements
 
@@ -49,6 +51,18 @@ For example:
 
 The script defaults to requiring `250GB` free on the export target. Use a larger
 drive for a full archive and future incremental exports.
+
+## Installation
+
+See [Install](docs/install.md) for setup from a fresh clone.
+
+For macOS with Homebrew:
+
+```zsh
+brew install pipx just
+pipx ensurepath
+pipx install osxphotos
+```
 
 ## Quick Start
 
