@@ -160,3 +160,8 @@ unless JavaScript is added later.
 - [Getting Started](docs/getting-started.md)
 - [Architecture](docs/architecture.md)
 - [Platform Roadmap](docs/platform-roadmap.md)
+- [Release Guide](docs/release.md)
+
+## License
+
+MIT. See [LICENSE](LICENSE).
