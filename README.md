@@ -30,7 +30,8 @@ For example:
 └── docs/
     ├── architecture.md
     ├── getting-started.md
-    └── install.md
+    ├── install.md
+    └── platform-roadmap.md
 ```
 
 - `scripts/export_photos_originals.zsh` is the exporter entrypoint.
@@ -39,6 +40,7 @@ For example:
 - `docs/getting-started.md` explains how to prepare a drive and run the export.
 - `docs/architecture.md` explains the script design and safety checks.
 - `docs/install.md` explains setup from a fresh clone.
+- `docs/platform-roadmap.md` defines current platform support and future scope.
 
 ## Requirements
 
@@ -157,3 +159,4 @@ unless JavaScript is added later.
 
 - [Getting Started](docs/getting-started.md)
 - [Architecture](docs/architecture.md)
+- [Platform Roadmap](docs/platform-roadmap.md)

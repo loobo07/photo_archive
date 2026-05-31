@@ -87,3 +87,15 @@ The core export work is delegated to
 [`osxphotos`](https://rhettbull.github.io/osxphotos/). This project does not
 parse the Photos SQLite database directly and does not copy files out of the
 Photos library bundle by hand.
+
+## Distribution Boundary
+
+The v1 distribution keeps `scripts/export_photos_originals.zsh` as the stable
+CLI entrypoint. The `justfile` provides local command shortcuts, GitHub Actions
+runs repository checks, and install docs explain setup without changing the
+script's runtime contract.
+
+This is intentionally macOS-first because the exporter depends on Apple Photos,
+mounted `/Volumes` paths, `diskutil`, and `osxphotos`. Future cross-platform
+work should introduce source-specific backends behind a new CLI contract instead
+of adding Windows/Linux conditionals to the current script.
