@@ -3,7 +3,9 @@
 tmp/
 .tmp/
 .cache/
+.build/
 coverage/
+dist/
 export-report.csv
 Photos Originals Export/
 docs/superpowers/plans/
